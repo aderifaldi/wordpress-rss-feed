@@ -14,6 +14,7 @@ public class Post implements Serializable {
     private Date date;
     private String title;
     private String content;
+    private String URL;
 
     public String getID() {
         return ID;
@@ -37,5 +38,9 @@ public class Post implements Serializable {
 
     public String getContent() {
         return content;
+    }
+
+    public String getURL() {
+        return URL;
     }
 }

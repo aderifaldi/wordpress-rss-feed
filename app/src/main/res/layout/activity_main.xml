@@ -13,8 +13,21 @@
         android:orientation="vertical">
 
         <!--TOOLBAR-->
-        <include
-            layout="@layout/ui_tool_bar"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/ui_tool_bar"/>
+
+            <TextView
+                android:id="@+id/txt_blog_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/side_menu_font_size"
+                android:layout_centerInParent="true"
+                android:text="WORDPRESS RSS FEED"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
 
         <!--CONTENT-->
         <FrameLayout
