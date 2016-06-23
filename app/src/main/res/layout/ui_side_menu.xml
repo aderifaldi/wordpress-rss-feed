@@ -21,22 +21,30 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_menu_rss_feed_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/side_menu_font_size"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:textColor="@color/colorWhite"
-        android:text="limaapril.wordpress.com"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_blog_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/side_menu_font_size"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorWhite"
+                android:text="limaapril.wordpress.com"/>
 
-    <TextView
-        android:id="@+id/txt_menu_rss_feed_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/side_menu_font_size"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:textColor="@color/colorWhite"
-        android:text="aderifaldi.wordpress.com"/>
-
+            <TextView
+                android:id="@+id/txt_blog_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/side_menu_font_size"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorWhite"
+                android:text="aderifaldi.wordpress.com"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -31,7 +31,7 @@ public class DetailFeedActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private ActionBar actionBar;
 
-    private TextView txt_item_feed_date, txt_item_feed_title;
+    private TextView txt_item_feed_date, txt_item_feed_title, txt_author_name;
     private ImageView img_profile;
     private Bundle extras;
     private Post post;
@@ -62,12 +62,15 @@ public class DetailFeedActivity extends AppCompatActivity {
 
         txt_item_feed_date = (TextView) findViewById(R.id.txt_item_feed_date);
         txt_item_feed_title = (TextView) findViewById(R.id.txt_item_feed_title);
+        txt_author_name = (TextView) findViewById(R.id.txt_author_name);
 
         webViewContent = (WebView) findViewById(R.id.webViewContent);
 
         Picasso.with(this).
                 load(post.getAuthor().
                 getAvatar_URL()).into(img_profile);
+
+        txt_author_name.setText(post.getAuthor().getName());
 
         txt_item_feed_date.setText(sdf.format(post.getDate()));
         txt_item_feed_title.setText(post.getTitle());

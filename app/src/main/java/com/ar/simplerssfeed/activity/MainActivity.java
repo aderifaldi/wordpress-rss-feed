@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ActionBar actionBar;
     private DrawerLayout mDrawerLayout;
     private Fragment fragment = null;
-    private TextView txt_menu_rss_feed_1, txt_menu_rss_feed_2;
+    private TextView txt_blog_1, txt_blog_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         actionBar.setTitle("");
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        txt_menu_rss_feed_1 = (TextView) findViewById(R.id.txt_menu_rss_feed_1);
-        txt_menu_rss_feed_2 = (TextView) findViewById(R.id.txt_menu_rss_feed_2);
+        txt_blog_1 = (TextView) findViewById(R.id.txt_blog_1);
+        txt_blog_2 = (TextView) findViewById(R.id.txt_blog_2);
 
-        txt_menu_rss_feed_1.setOnClickListener(this);
-        txt_menu_rss_feed_2.setOnClickListener(this);
+        txt_blog_1.setOnClickListener(this);
+        txt_blog_2.setOnClickListener(this);
 
         tampilkanKonten(1);
 
@@ -102,14 +102,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.txt_menu_rss_feed_1:
+            case R.id.txt_blog_1:
 
                 tampilkanKonten(1);
                 tutupSideMenu();
 
                 break;
 
-            case R.id.txt_menu_rss_feed_2:
+            case R.id.txt_blog_2:
 
                 tampilkanKonten(2);
                 tutupSideMenu();
